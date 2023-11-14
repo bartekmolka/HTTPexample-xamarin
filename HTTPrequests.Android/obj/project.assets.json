@@ -3453,39 +3453,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bartek\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/bartoszturczynski/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bartek\\Documents\\Programowanie\\mobilki\\litawa\\HTTPrequests\\HTTPrequests.Android\\HTTPrequests.Android.csproj",
+      "projectUniqueName": "/Users/bartoszturczynski/Downloads/HTTPrequests/HTTPrequests.Android/HTTPrequests.Android.csproj",
       "projectName": "HTTPrequests.Android",
-      "projectPath": "C:\\Users\\Bartek\\Documents\\Programowanie\\mobilki\\litawa\\HTTPrequests\\HTTPrequests.Android\\HTTPrequests.Android.csproj",
-      "packagesPath": "C:\\Users\\Bartek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bartek\\Documents\\Programowanie\\mobilki\\litawa\\HTTPrequests\\HTTPrequests.Android\\obj\\",
+      "projectPath": "/Users/bartoszturczynski/Downloads/HTTPrequests/HTTPrequests.Android/HTTPrequests.Android.csproj",
+      "packagesPath": "/Users/bartoszturczynski/.nuget/packages/",
+      "outputPath": "/Users/bartoszturczynski/Downloads/HTTPrequests/HTTPrequests.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Bartek\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/bartoszturczynski/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid13.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\Bartek\\Documents\\Programowanie\\mobilki\\litawa\\HTTPrequests\\HTTPrequests\\HTTPrequests.csproj": {
-              "projectPath": "C:\\Users\\Bartek\\Documents\\Programowanie\\mobilki\\litawa\\HTTPrequests\\HTTPrequests\\HTTPrequests.csproj"
+            "/Users/bartoszturczynski/Downloads/HTTPrequests/HTTPrequests/HTTPrequests.csproj": {
+              "projectPath": "/Users/bartoszturczynski/Downloads/HTTPrequests/HTTPrequests/HTTPrequests.csproj"
             }
           }
         }

@@ -1,21 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HTTPrequests.MainPage">
+             x:Class="HTTPrequests.MainPage"
+             Title="SwipeToDelete">
 
     <StackLayout>
-        <ListView x:Name="listView" ItemsSource="{Binding TodosCollection}">
+        <ListView x:Name="MyListView" ItemsSource="{Binding TodosCollection}" RowHeight="150">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Label Text="Cos"/>
-                        <StackLayout>
-                            <Label Text="{Binding todo}" />
-                        </StackLayout>
-                    </ViewCell>
+                        <SwipeView>
+                            <SwipeView.LeftItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="Delete" BackgroundColor="Red" Command="{Binding Source={x:Reference MyListView}, Path=BindingContext.DeleteCommand}" CommandParameter="{Binding .}" />
+                                </SwipeItems>
+                            </SwipeView.LeftItems>
+                            <SwipeView.RightItems>
+                                <!-- You can add right swipe items if needed -->
+                            </SwipeView.RightItems>
+                            <SwipeView.Content>
+                                                            <Frame Margin="10,5" BackgroundColor="#F0F0F0" CornerRadius="10" HasShadow="False">
+                                <StackLayout Padding="10">
+                                    <!-- Your content goes here -->
+                                    <Label Text="{Binding todo}" FontSize="20" TextColor="#333333" FontAttributes="Bold"/>
+                                </StackLayout>
+                                        </Frame>
+                            </SwipeView.Content>
+                        </SwipeView>
+                            </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
-
 </ContentPage>
