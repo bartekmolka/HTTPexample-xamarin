@@ -44,17 +44,15 @@ namespace HTTPrequests
 
         private async Task BombAnimationAsync()
         {
-            // Create a scale animation on a UI element (e.g., an image)
             Image bombImage = new Image
             {
-                Source = "bomb_icon.png", // Replace with your image source
+                Source = "bomb_icon.png", 
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 HorizontalOptions = LayoutOptions.CenterAndExpand
             };
 
             Content = bombImage;
 
-            // Scale animation
             await bombImage.ScaleTo(1.2, 300, Easing.CubicInOut);
             await Task.Delay(100);
             await bombImage.ScaleTo(1, 200, Easing.CubicInOut);
@@ -71,11 +69,10 @@ namespace HTTPrequests
             
             InitializeComponent();
 
-            // Call the request method and wait for the result
             Task.Run(async () =>
             {
                 var o = await Request();
-                todoObject = o; // Assign the result to your todoObject field
+                todoObject = o; 
 
                 if (TodosCollection.Count > 0 ? true : false) return;
                 if (todoObject?.todos != null)
@@ -87,8 +84,8 @@ namespace HTTPrequests
                     }
                 }
 
-                Console.WriteLine(todoObject.total); // Access a property of the Root object
-                OnPropertyChanged(nameof(TodosCollection)); // Notify that the TodosCollection property has changed
+                Console.WriteLine(todoObject.total); 
+                OnPropertyChanged(nameof(TodosCollection)); 
             });
 
              DeleteCommand = new Command<Todo>(item => 
@@ -100,21 +97,19 @@ namespace HTTPrequests
                 int index = TodosCollection.IndexOf(item);
                 for (int i = 0; i < copyList.Count; i++)
                 {
-                    if (i == 0) // 0-based index, so the fifth element is at index 4
+                    if (i == 0) 
                     {
-                        // Delete the fifth element
                         TodosCollection.Clear();
-                        continue; // Exit the loop after deleting the fifth element
+                        continue; 
                     }
                     copyList.Add(TodosCollection[i]);
                 }
                 ObservableCollection<Todo> cp = new ObservableCollection<Todo>(copyList);
 
-                // Assign the modified copy back to the original ObservableCollection
                 TodosCollection = cp;
             });
 
-            BindingContext = this; // Set the BindingContext to the MainPage instance
+            BindingContext = this; 
         }
         
 

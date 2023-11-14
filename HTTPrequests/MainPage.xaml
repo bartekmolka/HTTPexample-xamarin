@@ -16,12 +16,10 @@
                                 </SwipeItems>
                             </SwipeView.LeftItems>
                             <SwipeView.RightItems>
-                                <!-- You can add right swipe items if needed -->
                             </SwipeView.RightItems>
                             <SwipeView.Content>
                                                             <Frame Margin="10,5" BackgroundColor="#F0F0F0" CornerRadius="10" HasShadow="False">
                                 <StackLayout Padding="10">
-                                    <!-- Your content goes here -->
                                     <Label Text="{Binding todo}" FontSize="20" TextColor="#333333" FontAttributes="Bold"/>
                                 </StackLayout>
                                         </Frame>
